@@ -1,0 +1,121 @@
+/*  Small devices (landscape phones, 576px and up) */
+/*  Medium devices (tablets, 768px and up) 639*/
+/*  Large devices (desktops, 992px and up) */
+/* md screen */
+@media (min-width: 640px) {
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+  .hero {
+    padding-top: 50px;
+    margin-top: 0px;
+  }
+  .left {
+    margin-top: 100px;
+  }
+  p.hero-p {
+    width: 75%;
+    padding: 0 20px;
+  }
+  .right img {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+/* lg screen */
+@media (min-width: 1023px) {
+  /* ----navbarsection---- */
+  form span {
+    display: none;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+  }
+  ul.navbar-nav::before,
+  ul.navbar-nav::after {
+    display: none;
+  }
+  /* ---------------------- */
+  ul.navbar-nav {
+    padding: 0px;
+  }
+  button.bg-y {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+  ul.navbar-nav li {
+    padding: 0px;
+  }
+  ul.navbar-nav li a.nav-link,
+  form span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  a.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  button.bg-y {
+    padding: 8px 20px;
+  }
+  /* --------hero section---- */
+  .hero {
+    padding-top: 150px;
+    margin-top: 0px;
+  }
+  .left {
+    margin-top: 0px;
+  }
+  p.hero-p {
+    width: 100%;
+    padding: 0px;
+  }
+  .right {
+    width: 100%;
+  }
+  .right img {
+    height: 400px;
+    object-fit: cover;
+  }
+  /* -----------fonts------- */
+  .hero-h {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  .hero-p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .hero-btn-font {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .badge p.font-body {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .badge p.text-light {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .badge i {
+    font-size: 20px;
+  }
+}
+/* xl screen */
+@media (min-width: 1800px) {
+   .hero {
+    padding-top: 300px;
+    margin-top: 0px;
+  }
+
+}
