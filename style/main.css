@@ -65,6 +65,7 @@
 }
 body {
   font-family: "Days One", sans-serif;
+  background-color: #0b0e13;
 }
 /* ----important classes------- */
 
@@ -72,7 +73,7 @@ body {
   background-color: #0b0e13;
 }
 .bg-secondry {
-  background-color: #0f1420;
+  background-color: #1A1A1A;
 }
 .bg-section {
   background-color: #1e2939;
@@ -97,6 +98,9 @@ body {
 }
 .font-body {
   font-family: "Chakra Petch", sans-serif;
+}
+.border-c{
+  border-color: #1E2939;
 }
 /* ----------navbar----------- */
 /* ----------set colors--- */
@@ -181,9 +185,7 @@ a.navbar-brand {
   line-height: 24.5px;
 }
 /* -------------header----------- */
-.hero {
-  margin-top: 50px;
-}
+
 .bg-hero {
   background-image:
     linear-gradient(#000000e0, #000000e0), url("../images/hero-bg.jpg");
@@ -213,6 +215,7 @@ a.navbar-brand {
 .btn-hero button.btn-two {
   border: 2px solid #cbfe1c;
   background-color: inherit;
+  transition: 300ms;
 }
 .btn-hero button.btn-two:hover {
   background-color: #cbfe1c;
@@ -242,3 +245,210 @@ a.navbar-brand {
 .badge i {
   font-size: 14px;
 }
+/*-------section-latest------ */
+/* title-- */
+.title p::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #cbfe1c;
+  top: 50%;
+  left: 25%;
+  width: 10%;
+  transform: translateY(-50%);
+  background: linear-gradient(to left, #cbfe1c, transparent);
+}
+.title p::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #cbfe1c;
+  top: 50%;
+  right: 25%;
+  width: 10%;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #cbfe1c, transparent);
+}
+/* slide--- */
+.latest-games .slide .overlay .header span {
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 14px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.latest-games .slide .overlay .header span:hover {
+  color: #f1f1f1;
+}
+.latest-games .slide .card .footer h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24.5px;
+}
+/* ------------ */
+/* Carousel Container */
+.card {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  aspect-ratio: 4 / 3.4;
+  border: 3px solid;
+  transition: 0.4s ease-in-out;
+  background-color: transparent;
+}
+.card:hover {
+  border: 3px solid #cbfe1c;
+}
+.card .photo,
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+.card:hover img {
+  transform: scale(1.05);
+  transform: scale(1.07);
+}
+.carousel-item .card .overlay {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(201, 254, 27, 0.5));
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card .header {
+  transform: translateY(-50px);
+  transition: 0.4s ease-in-out;
+}
+.card:hover .header {
+  transform: translateY(5px);
+}
+.card .footer {
+  bottom: -60px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  width: 100%;
+}
+.card:hover .footer {
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(4px);
+}
+/* ------btn----- */
+.btn-prev {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 105%;
+  left: 40%;
+  color: #525861;
+  border: 1px solid;
+  transition: 300ms;
+}
+.btn-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 105%;
+  left: 55%;
+  background-color: transparent;
+  color: #525861;
+  border: 1px solid;
+  transition: 300ms;
+}
+.btn-prev:hover,
+.btn-next:hover {
+  color: #cbfe1c;
+  border-color: #cbfe1c;
+}
+.btn-games {
+  position: absolute;
+  top: 125%;
+  width: 100%;
+  background-color: inherit;
+  border: 2px solid #cbfe1c;
+  transition: 300ms;
+  color: #cbfe1c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17px;
+}
+.btn-games:hover {
+  background-color: #cbfe1c;
+  color: black;
+}.latest-games .row > :not(:first-child) {
+  display: none;
+}
+/* ------section-3--------- */
+.dev-card {
+  aspect-ratio: 1 / 1;     
+  overflow: hidden;   
+  transition: border-color 0.3s ease-in-out;
+  position: relative;
+}
+.icon{
+  transition: 0.4s ease-in-out;
+}
+.dev-card:hover{
+  border-color: #cbfe1c !important;
+}
+.dev-card:hover .icon i{
+  color:black ;
+}
+.dev-card:hover .icon {
+  background-color: #cbfe1c;
+}
+/* -----before and after----- */
+.dev-card {
+  position: relative;
+  overflow: hidden; 
+  transition: border-color 0.3s ease-in-out;
+}
+.dev-card::before,
+.dev-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+.dev-card::before {
+  top: 12px;   
+  left: 12px;  
+  border-width: 16px 16px 0 0; 
+  border-color: #cbfe1c transparent transparent transparent; 
+  transform: translate(-100px, -100px); 
+}
+.dev-card::after {
+  bottom: 12px; 
+  right: 12px;  
+  border-width: 0 0 16px 16px;
+  border-color: transparent transparent #cbfe1c transparent;
+  transform: translate(100px, 100px); 
+}
+.dev-card:hover::before,
+.dev-card:hover::after {
+  transform: translate(0, 0); 
+}
+.section-doing::after{
+  content:'';
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  bottom: -20px;
+  left: 10%;
+  background-image: linear-gradient(to right, black,#cbfe1c,black);
+}
+/* ---------animation-section-------- */
+
+
+
+

@@ -1,6 +1,13 @@
 /*  Small devices (landscape phones, 576px and up) */
 /*  Medium devices (tablets, 768px and up) 639*/
 /*  Large devices (desktops, 992px and up) */
+/* ---------------- */
+/* sm -screen */
+/* @media screen and (max-width: 639px) {
+  .row > :not(:first-child) {
+    display: none;
+  }
+} */
 /* md screen */
 @media (min-width: 640px) {
   .container {
@@ -21,6 +28,35 @@
   .right img {
     height: 400px;
     object-fit: cover;
+  }
+  /* ----section-latest---- */
+  .title p::before {
+    left: 30%;
+  }
+  .title p::after {
+    right: 30%;
+  }
+  .latest-games .row > :not(:first-child) {
+    display: block;
+  }
+  .latest-games .row > :nth-child(3) {
+    display: none;
+  }
+  .btn-prev {
+    top: 105%;
+    left: 40%;
+  }
+  .btn-next {
+    top: 105%;
+    left: 50%;
+  }
+  .btn-games {
+    top: 105%;
+    left: 60%;
+    width: 20%;
+  }
+  .card {
+    margin-right: 10px;
   }
 }
 /* lg screen */
@@ -67,9 +103,11 @@
     padding: 8px 20px;
   }
   /* --------hero section---- */
-  .hero {
-    padding-top: 150px;
-    margin-top: 0px;
+  .parent {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .left {
     margin-top: 0px;
@@ -110,12 +148,33 @@
   .badge i {
     font-size: 20px;
   }
+  /* ------latest-games--- */
+  .title p::before {
+    left: 35%;
+  }
+  .title p::after {
+    right: 35%;
+  }
+  .latest-games .row > :not(:first-child) {
+    display: block;
+  }
+  .latest-games .row > :nth-child(3) {
+    display: block;
+  }
+  .btn-prev {
+    top: 105%;
+    left: 40%;
+  }
+  .btn-next {
+    top: 105%;
+    left: 45%;
+  }
+  .btn-games {
+    top: 105%;
+    left: 50%;
+    width: 10%;
+  }
 }
 /* xl screen */
 @media (min-width: 1800px) {
-   .hero {
-    padding-top: 300px;
-    margin-top: 0px;
-  }
-
 }
