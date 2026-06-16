@@ -149,10 +149,10 @@
     font-size: 20px;
   }
   /* ------latest-games--- */
-  .title p::before {
+  .title-all p.element::before {
     left: 35%;
   }
-  .title p::after {
+  .title-all p.element::after {
     right: 35%;
   }
   .latest-games .row > :not(:first-child) {

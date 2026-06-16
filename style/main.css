@@ -73,7 +73,7 @@ body {
   background-color: #0b0e13;
 }
 .bg-secondry {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 .bg-section {
   background-color: #1e2939;
@@ -99,8 +99,8 @@ body {
 .font-body {
   font-family: "Chakra Petch", sans-serif;
 }
-.border-c{
-  border-color: #1E2939;
+.border-c {
+  border-color: #1e2939;
 }
 /* ----------navbar----------- */
 /* ----------set colors--- */
@@ -185,7 +185,6 @@ a.navbar-brand {
   line-height: 24.5px;
 }
 /* -------------header----------- */
-
 .bg-hero {
   background-image:
     linear-gradient(#000000e0, #000000e0), url("../images/hero-bg.jpg");
@@ -247,7 +246,7 @@ a.navbar-brand {
 }
 /*-------section-latest------ */
 /* title-- */
-.title p::before {
+.title-all p.element::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -258,7 +257,7 @@ a.navbar-brand {
   transform: translateY(-50%);
   background: linear-gradient(to left, #cbfe1c, transparent);
 }
-.title p::after {
+.title-all p.element::after {
   content: "";
   position: absolute;
   height: 3px;
@@ -269,6 +268,7 @@ a.navbar-brand {
   transform: translateY(-50%);
   background: linear-gradient(to right, #cbfe1c, transparent);
 }
+
 /* slide--- */
 .latest-games .slide .overlay .header span {
   font-size: 10.5px;
@@ -383,24 +383,25 @@ a.navbar-brand {
 .btn-games:hover {
   background-color: #cbfe1c;
   color: black;
-}.latest-games .row > :not(:first-child) {
+}
+.latest-games .row > :not(:first-child) {
   display: none;
 }
 /* ------section-3--------- */
 .dev-card {
-  aspect-ratio: 1 / 1;     
-  overflow: hidden;   
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   transition: border-color 0.3s ease-in-out;
   position: relative;
 }
-.icon{
+.icon {
   transition: 0.4s ease-in-out;
 }
-.dev-card:hover{
+.dev-card:hover {
   border-color: #cbfe1c !important;
 }
-.dev-card:hover .icon i{
-  color:black ;
+.dev-card:hover .icon i {
+  color: black;
 }
 .dev-card:hover .icon {
   background-color: #cbfe1c;
@@ -408,7 +409,7 @@ a.navbar-brand {
 /* -----before and after----- */
 .dev-card {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   transition: border-color 0.3s ease-in-out;
 }
 .dev-card::before,
@@ -418,37 +419,168 @@ a.navbar-brand {
   width: 0;
   height: 0;
   border-style: solid;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .dev-card::before {
-  top: 12px;   
-  left: 12px;  
-  border-width: 16px 16px 0 0; 
-  border-color: #cbfe1c transparent transparent transparent; 
-  transform: translate(-100px, -100px); 
+  top: 12px;
+  left: 12px;
+  border-width: 16px 16px 0 0;
+  border-color: #cbfe1c transparent transparent transparent;
+  transform: translate(-100px, -100px);
 }
 .dev-card::after {
-  bottom: 12px; 
-  right: 12px;  
+  bottom: 12px;
+  right: 12px;
   border-width: 0 0 16px 16px;
   border-color: transparent transparent #cbfe1c transparent;
-  transform: translate(100px, 100px); 
+  transform: translate(100px, 100px);
 }
 .dev-card:hover::before,
 .dev-card:hover::after {
-  transform: translate(0, 0); 
+  transform: translate(0, 0);
 }
-.section-doing::after{
-  content:'';
+.section-doing::after {
+  content: "";
   position: absolute;
   width: 80%;
-  height: 3px;
+  height: 4px;
   bottom: -20px;
   left: 10%;
-  background-image: linear-gradient(to right, black,#cbfe1c,black);
+  background-image: linear-gradient(to right, black, #cbfe1c, black);
 }
 /* ---------animation-section-------- */
-
-
-
-
+.aniamtion-section {
+  background-image: radial-gradient(#cbfe1c 0%, #0b0e13 70%);
+}
+.first-row {
+  animation: animatemove 20s linear infinite;
+}
+@keyframes animatemove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.second-row {
+  animation: animatemove-2 20s linear infinite;
+}
+@keyframes animatemove-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+/* ------team-member------- */
+.team-heading {
+  font-size: 42px;
+}
+.p-color {
+  color: #515660;
+}
+.p-card {
+  font-size: 11px;
+  color: oklch(0.707 0.022 261.325);
+}
+/* -----grid-layout---- */
+.team-card {
+  background-color: #0b0c10;
+  cursor: pointer;
+}
+.team-card img {
+  filter: grayscale(100%);
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+.team-card:hover img {
+  filter: grayscale(0%);
+}
+.sliding-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(0);
+  z-index: 2;
+}
+.team-card:hover .sliding-overlay {
+  transform: translateY(-100%);
+}
+.text-rotate {
+  top: 75%;
+  left: 80%;
+  transform: rotate(90deg);
+}
+/* --------contact-------- */
+.bg-contact {
+  background-color: #0e1420;
+}
+.p-contact-color {
+  color: #99a1af;
+}
+.icon {
+  transition: all 0.4 ease-in-out;
+}
+.community-card {
+  background: linear-gradient(
+    to right,
+    #c8fd23 0%,
+    #b2f83e 20%,
+    #8bf057 50%,
+    #54e66a 70%,
+    #18e072 100%
+  );
+}
+.social-icons .icon:hover {
+  background-image: linear-gradient(
+    rgba(203, 254, 28, 0.5),
+    rgba(203, 254, 28, 0.3)
+  );
+}
+.bg-form-input {
+  background-color: #364153;
+}
+input::placeholder {
+  color: #99a1af !important;
+}
+input{
+  border-color:transparent !important;
+}
+input:focus{
+  background-color: transparent;
+}
+textarea::placeholder{
+  color: #99a1af !important;
+}
+textarea{
+  resize: none;
+}
+.form-control:focus,
+#select-game.form-select:focus {
+  border-color: #cbfe1c !important;
+  box-shadow: none;
+  background-color: #364153;
+}
+.form-control:focus{
+  border-color: #cbfe1c !important;
+  box-shadow: none;
+}
+.form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+#subscribe {
+  transform: scale(1.7);       
+  vertical-align: middle;
+  margin-left: 7px;      
+}
+.form-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-color: #354051;
+}
+/* ----------------------- */
