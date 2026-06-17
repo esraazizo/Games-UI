@@ -68,7 +68,6 @@ body {
   background-color: #0b0e13;
 }
 /* ----important classes------- */
-
 .bg-main {
   background-color: #0b0e13;
 }
@@ -102,26 +101,29 @@ body {
 .border-c {
   border-color: #1e2939;
 }
+::selection {
+  background-color: #cbfe1c;
+  color: black;
+}
 /* ----------navbar----------- */
 /* ----------set colors--- */
-.nav-link:hover {
-  color: #cbfe1c;
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: white;
+  --bs-navbar-hover-color: #cbfe1c;
+  --bs-navbar-disabled-color: white;
+  --bs-navbar-active-color: #cbfe1c;
 }
-.navbar .navbar-toggler-icon:hover {
-  color: #cbfe1c;
-}
-form i,
+.icon-content i,
 span {
   color: white;
   cursor: pointer;
 }
-form i:hover,
+.icon-content i:hover,
 span:hover {
   color: #cbfe1c;
 }
-form span {
-  margin-left: 0.5rem;
-}
+
 .btn:hover {
   background-color: #cbfe1c;
 }
@@ -138,10 +140,10 @@ form span {
   color: #cbfe1c;
 }
 /* ----------edits on navbar--- */
-form {
+.icon-content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 ul.navbar-nav {
   position: relative;
@@ -170,12 +172,6 @@ button.bg-y {
   font-weight: 700;
   line-height: 21px;
 }
-ul.navbar-nav li a.nav-link,
-form span {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-}
 ul.navbar-nav li {
   padding: 0.5rem 0px;
 }
@@ -195,20 +191,15 @@ a.navbar-brand {
   background-attachment: fixed;
 }
 .hero-h {
-  font-size: 31.5px;
-  font-weight: 700;
-  line-height: 39.375px;
-  color: rgb(241, 241, 241);
+  font-size: 32px;
 }
 .hero-p {
   font-size: 12.25px;
-  font-weight: 400;
   line-height: 19.9062px;
   color: oklch(0.872 0.01 258.338);
 }
 .hero-btn-font {
   font-size: 12.25px;
-  font-weight: 700;
   line-height: 17.5px;
 }
 .btn-hero button.btn-two {
@@ -220,6 +211,7 @@ a.navbar-brand {
   background-color: #cbfe1c;
   color: black;
 }
+/* ------- */
 .right {
   width: 90%;
   background-image: linear-gradient(to right, #b8fa38, #50e56a);
@@ -234,7 +226,6 @@ a.navbar-brand {
 }
 .badge p.font-body {
   font-size: 10.5px;
-  font-weight: 400;
   color: oklch(0.707 0.022 261.325);
 }
 .badge p.text-light {
@@ -268,23 +259,14 @@ a.navbar-brand {
   transform: translateY(-50%);
   background: linear-gradient(to right, #cbfe1c, transparent);
 }
-
 /* slide--- */
 .latest-games .slide .overlay .header span {
   font-size: 10.5px;
-  font-weight: 700;
-  line-height: 14px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .latest-games .slide .overlay .header span:hover {
   color: #f1f1f1;
 }
-.latest-games .slide .card .footer h3 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24.5px;
-}
-/* ------------ */
 /* Carousel Container */
 .card {
   width: 100%;
@@ -375,9 +357,7 @@ a.navbar-brand {
   background-color: inherit;
   border: 2px solid #cbfe1c;
   transition: 300ms;
-  color: #cbfe1c;
   font-size: 12px;
-  font-weight: 700;
   line-height: 17px;
 }
 .btn-games:hover {
@@ -544,16 +524,16 @@ a.navbar-brand {
 input::placeholder {
   color: #99a1af !important;
 }
-input{
-  border-color:transparent !important;
+input {
+  border-color: transparent !important;
 }
-input:focus{
+input:focus {
   background-color: transparent;
 }
-textarea::placeholder{
+textarea::placeholder {
   color: #99a1af !important;
 }
-textarea{
+textarea {
   resize: none;
 }
 .form-control:focus,
@@ -562,17 +542,17 @@ textarea{
   box-shadow: none;
   background-color: #364153;
 }
-.form-control:focus{
+.form-control:focus {
   border-color: #cbfe1c !important;
   box-shadow: none;
 }
 .form-select {
-    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 #subscribe {
-  transform: scale(1.7);       
+  transform: scale(1.7);
   vertical-align: middle;
-  margin-left: 7px;      
+  margin-left: 7px;
 }
 .form-btn::after {
   content: "";
@@ -583,4 +563,11 @@ textarea{
   height: 1px;
   background-color: #354051;
 }
-/* ----------------------- */
+/* -------footer-------- */
+.social-footer i:hover {
+  color: #cbfe1c;
+}
+ul.footer-link li a:hover,
+.policy-links a:hover {
+  color: #cbfe1c;
+}

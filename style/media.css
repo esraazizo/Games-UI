@@ -2,12 +2,6 @@
 /*  Medium devices (tablets, 768px and up) 639*/
 /*  Large devices (desktops, 992px and up) */
 /* ---------------- */
-/* sm -screen */
-/* @media screen and (max-width: 639px) {
-  .row > :not(:first-child) {
-    display: none;
-  }
-} */
 /* md screen */
 @media (min-width: 640px) {
   .container {
@@ -30,10 +24,10 @@
     object-fit: cover;
   }
   /* ----section-latest---- */
-  .title p::before {
+  .title-all p.element::before {
     left: 30%;
   }
-  .title p::after {
+  .title-all p.element::after {
     right: 30%;
   }
   .latest-games .row > :not(:first-child) {
@@ -62,10 +56,10 @@
 /* lg screen */
 @media (min-width: 1023px) {
   /* ----navbarsection---- */
-  form span {
+  .icon-content span {
     display: none;
   }
-  form {
+  .icon-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,12 +81,6 @@
   }
   ul.navbar-nav li {
     padding: 0px;
-  }
-  ul.navbar-nav li a.nav-link,
-  form span {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
   }
   a.navbar-brand {
     font-size: 20px;
@@ -174,7 +162,4 @@
     left: 50%;
     width: 10%;
   }
-}
-/* xl screen */
-@media (min-width: 1800px) {
 }
